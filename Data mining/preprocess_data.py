@@ -3,12 +3,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 
 from nltk.stem import WordNetLemmatizer
-
+import nltk
+nltk.download('wordnet')
 
 def preprocess_data():
 
     #load dataset
-    df = pd.read_csv("all_data.csv")
+    df = pd.read_csv("Data mining\\all_data.csv")
 
     #filter on english
     df = df[df["Review_Language"] == "English"].copy()
@@ -16,7 +17,7 @@ def preprocess_data():
     #target variables: 0 -> real, 1 -> fake
     y = df["source"]
 
-    #data of review has to be abltered (revieew existed of two columns)
+    #data of review has to be altered (review existed of two columns)
     df["review_text"] = (
         df["Upside_Review"].fillna("") + " " +
         df["Downside_Review"].fillna("")

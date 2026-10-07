@@ -20,7 +20,7 @@ def multinomial_naive_bayes(X_train_bow, X_test_bow, y_train, y_test):
     f1 = f1_score(y_test, y_pred)
 
     #print results
-    print("\nMultinomial Naive Bayes results")
+    print("\nMultinomial Naive Bayes Results")
     print("--------------------------------")
     print("Accuracy:", accuracy)
     print("Precision:", precision)
