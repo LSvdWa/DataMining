@@ -22,7 +22,7 @@ multinomial_naive_bayes(
     y_train,
     y_test
 )
-#new
+
 
 print("\n -- Random Forest -- ")
 random_forest(
